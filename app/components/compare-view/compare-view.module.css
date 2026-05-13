@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.profilesRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.reposSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.reposGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.reposCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.colHeader {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+  font-size: var(--text-xs);
+}
+.colHeaderA { background: var(--color-gradient-1); }
+.colHeaderB { background: var(--color-gradient-2); }
+
+@media (max-width: 900px) {
+  .profilesRow, .reposGrid {
+    grid-template-columns: 1fr;
+  }
+}

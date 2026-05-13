@@ -1,0 +1,107 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.card {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.scoreRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.scoreSep {
+  font-family: var(--family-display);
+  color: var(--color-text-subtle);
+  font-weight: 700;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.pillActive {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+  border-color: transparent;
+}
+.pillA.pillActive { background: var(--color-gradient-1); color: white; }
+.pillB.pillActive { background: var(--color-gradient-2); color: white; }
+
+.pillLogin { font-weight: 600; font-size: var(--text-sm); }
+.pillScore { font-size: var(--text-xs); opacity: 0.85; }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-surface) 60%, transparent);
+  transition: background 200ms ease;
+}
+.row:hover { background: var(--color-surface); }
+
+.label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.value {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--family-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  transition: color 200ms ease, transform 200ms ease;
+}
+.valueA { justify-content: flex-end; }
+.valueB { justify-content: flex-start; }
+
+.winner {
+  color: var(--color-primary);
+  transform: scale(1.06);
+}
+
+.loser {
+  color: var(--color-text-subtle);
+  opacity: 0.65;
+}
+
+.trophy { color: #f5b400; }
+.tieIcon { color: var(--color-text-subtle); }
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+    text-align: center;
+  }
+  .valueA, .valueB { justify-content: center; }
+  .label { order: -1; }
+}
