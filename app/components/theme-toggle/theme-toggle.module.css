@@ -1,0 +1,23 @@
+.toggle {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  transition: background 200ms ease, transform 200ms ease, border-color 200ms ease;
+  backdrop-filter: blur(12px);
+}
+
+.toggle:hover {
+  background: var(--color-surface-strong);
+  border-color: var(--color-border-strong);
+  transform: rotate(15deg);
+}
+
+.icon {
+  display: inline-flex;
+}

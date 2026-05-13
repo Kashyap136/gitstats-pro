@@ -1,0 +1,7 @@
+.card { height: 100%; }
+.chartWrap { width: 100%; }
+.empty {
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-8) 0;
+}
