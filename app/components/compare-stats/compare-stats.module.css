@@ -23,6 +23,12 @@
   color: var(--color-text-subtle);
   font-weight: 700;
 }
+@media (max-width: 480px) {
+  .scoreSep {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 
 .pill {
   display: inline-flex;
@@ -32,18 +38,39 @@
   border-radius: 999px;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
-  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
 }
 .pillActive {
   transform: scale(1.05);
   box-shadow: var(--shadow-glow);
   border-color: transparent;
 }
-.pillA.pillActive { background: var(--color-gradient-1); color: white; }
-.pillB.pillActive { background: var(--color-gradient-2); color: white; }
+.pillA.pillActive {
+  background: var(--color-gradient-1);
+  color: white;
+}
+.pillB.pillActive {
+  background: var(--color-gradient-2);
+  color: white;
+}
+@media (max-width: 480px) {
+  .pillB.pillActive {
+    padding-left: 6px;
+    padding-right: var(--space-1);
+  }
+}
 
-.pillLogin { font-weight: 600; font-size: var(--text-sm); }
-.pillScore { font-size: var(--text-xs); opacity: 0.85; }
+.pillLogin {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+.pillScore {
+  font-size: var(--text-xs);
+  opacity: 0.85;
+}
 
 .list {
   display: flex;
@@ -61,7 +88,9 @@
   background: color-mix(in srgb, var(--color-surface) 60%, transparent);
   transition: background 200ms ease;
 }
-.row:hover { background: var(--color-surface); }
+.row:hover {
+  background: var(--color-surface);
+}
 
 .label {
   font-size: var(--text-sm);
@@ -78,10 +107,16 @@
   font-weight: 700;
   font-size: var(--text-lg);
   color: var(--color-text);
-  transition: color 200ms ease, transform 200ms ease;
+  transition:
+    color 200ms ease,
+    transform 200ms ease;
 }
-.valueA { justify-content: flex-end; }
-.valueB { justify-content: flex-start; }
+.valueA {
+  justify-content: flex-end;
+}
+.valueB {
+  justify-content: flex-start;
+}
 
 .winner {
   color: var(--color-primary);
@@ -93,8 +128,12 @@
   opacity: 0.65;
 }
 
-.trophy { color: #f5b400; }
-.tieIcon { color: var(--color-text-subtle); }
+.trophy {
+  color: #f5b400;
+}
+.tieIcon {
+  color: var(--color-text-subtle);
+}
 
 @media (max-width: 600px) {
   .row {
@@ -102,6 +141,11 @@
     gap: var(--space-1);
     text-align: center;
   }
-  .valueA, .valueB { justify-content: center; }
-  .label { order: -1; }
+  .valueA,
+  .valueB {
+    justify-content: center;
+  }
+  .label {
+    order: -1;
+  }
 }

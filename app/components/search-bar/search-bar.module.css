@@ -8,12 +8,21 @@
   border-radius: var(--radius-pill);
   backdrop-filter: blur(20px) saturate(140%);
   box-shadow: var(--shadow-md), var(--inner-shadow-sm);
-  transition: border-color 200ms ease, box-shadow 200ms ease;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+@media (max-width: 480px) {
+  .form {
+    width: 290px;
+  }
 }
 
 .form:focus-within {
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-md), 0 0 0 4px color-mix(in srgb, var(--color-primary) 25%, transparent);
+  box-shadow:
+    var(--shadow-md),
+    0 0 0 4px color-mix(in srgb, var(--color-primary) 25%, transparent);
 }
 
 .icon {
@@ -45,7 +54,9 @@
   border-radius: 999px;
   color: var(--color-text-muted);
   background: transparent;
-  transition: background 150ms ease, color 150ms ease;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
 }
 .clear:hover {
   background: var(--color-surface-strong);
@@ -59,7 +70,10 @@
   padding: var(--space-3) var(--space-5);
   border-radius: var(--radius-pill);
   font-size: var(--text-sm);
-  transition: transform 150ms ease, box-shadow 200ms ease, opacity 200ms ease;
+  transition:
+    transform 150ms ease,
+    box-shadow 200ms ease,
+    opacity 200ms ease;
   box-shadow: 0 8px 22px color-mix(in srgb, var(--color-primary) 40%, transparent);
 }
 .submit:hover:not(:disabled) {
@@ -71,5 +85,7 @@
 }
 
 @media (max-width: 520px) {
-  .submit { padding: var(--space-3) var(--space-4); }
+  .submit {
+    padding: var(--space-3) var(--space-4);
+  }
 }
