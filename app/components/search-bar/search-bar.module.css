@@ -15,6 +15,7 @@
 @media (max-width: 480px) {
   .form {
     width: 288px;
+    margin-left: var(--space-5);
   }
 }
 
