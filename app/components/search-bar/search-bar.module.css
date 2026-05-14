@@ -14,7 +14,7 @@
 }
 @media (max-width: 480px) {
   .form {
-    width: 290px;
+    width: 100%;
   }
 }
 
